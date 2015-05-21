@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.alexliu.lecturetimes.LectureTimesActivity">
+
+    <TextView android:text="@string/lectures" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lectures"
+        android:textSize="18dp"
+        android:layout_below="@+id/courseCode"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tutorials"
+        android:id="@+id/textView2"
+        android:paddingTop="10dp"
+        android:layout_above="@+id/tutorialTimesList"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="18dp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lectureTimesList"
+        android:layout_below="@+id/lectures"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/textView2"
+        android:listSelector="@android:color/transparent" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:id="@+id/tutorialTimesList"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:listSelector="@android:color/transparent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Course Code"
+        android:id="@+id/courseCode"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/course_code_invalid"
+        android:id="@+id/codeInvalidText"
+        android:layout_alignTop="@+id/lectureTimesList"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="88dp"
+        android:textColor="#ffff0400" />
+
+</RelativeLayout>
